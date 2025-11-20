@@ -68,7 +68,7 @@ class SignUpResponseData {
 }
 
 class SignUpErrors {
-  List<String> email;
+  List email;
   SignUpErrors({required this.email});
 
   Map<String, dynamic> toMap() {
@@ -76,9 +76,7 @@ class SignUpErrors {
   }
 
   factory SignUpErrors.fromMap(Map<String, dynamic> map) {
-    return SignUpErrors(
-      email: List<String>.from((map['email'] as List<String>)),
-    );
+    return SignUpErrors(email: List.from((map['email'])));
   }
 
   String toJson() => json.encode(toMap());

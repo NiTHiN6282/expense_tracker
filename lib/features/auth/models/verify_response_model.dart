@@ -72,11 +72,11 @@ class VerifyData {
 }
 
 class VerifyErrors {
-  final List<String> email;
+  final List email;
 
   VerifyErrors({required this.email});
 
   factory VerifyErrors.fromJson(Map<String, dynamic> json) {
-    return VerifyErrors(email: List<String>.from(json['email']));
+    return VerifyErrors(email: List.from(json['email']));
   }
 }
